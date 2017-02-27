@@ -20,6 +20,13 @@ if(is_post_request()) {
   if(isset($_POST['username'])) { $user['username'] = $_POST['username']; }
   if(isset($_POST['email'])) { $user['email'] = $_POST['email']; }
 
+  if (!request_is_same_domain()) {
+    exit("Error: invalid referrer.");
+  }
+
+  if (!csrf_token_is_valid() || !csrf_token_is_recent()) {
+    exit("Error: invalid request.");
+  }
 
   $result = update_user($user);
   if($result === true) {
@@ -49,6 +56,7 @@ if(is_post_request()) {
     Email:<br />
     <input type="text" name="email" value="<?php echo h($user['email']); ?>" /><br />
     <br />
+    <?php echo csrf_token_tag(); ?>
     <input type="submit" name="submit" value="Update"  />
   </form>
 

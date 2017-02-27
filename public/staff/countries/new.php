@@ -15,6 +15,14 @@ if(is_post_request()) {
   if(isset($_POST['name'])) { $country['name'] = $_POST['name']; }
   if(isset($_POST['code'])) { $country['code'] = $_POST['code']; }
 
+  if (!request_is_same_domain()) {
+    exit("Error: invalid referrer.");
+  }
+
+  if (!csrf_token_is_valid() || !csrf_token_is_recent()) {
+    exit("Error: invalid request.");
+  }
+
   $result = insert_country($country);
   if($result === true) {
     $new_id = db_insert_id($db);
@@ -40,6 +48,7 @@ if(is_post_request()) {
     Code:<br />
     <input type="text" name="code" value="<?php echo h($country['code']); ?>" /><br />
     <br />
+    <?php echo csrf_token_tag(); ?>
     <input type="submit" name="submit" value="Create"  />
   </form>
 

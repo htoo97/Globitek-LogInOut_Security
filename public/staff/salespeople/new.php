@@ -19,6 +19,14 @@ if(is_post_request()) {
   if(isset($_POST['phone'])) { $salesperson['phone'] = $_POST['phone']; }
   if(isset($_POST['email'])) { $salesperson['email'] = $_POST['email']; }
 
+  if (!request_is_same_domain()) {
+    exit("Error: invalid referrer.");
+  }
+
+  if (!csrf_token_is_valid() || !csrf_token_is_recent()) {
+    exit("Error: invalid request.");
+  }
+
   $result = insert_salesperson($salesperson);
   if($result === true) {
     $new_id = db_insert_id($db);
@@ -48,6 +56,7 @@ if(is_post_request()) {
     Email:<br />
     <input type="text" name="email" value="<?php echo h($salesperson['email']); ?>" /><br />
     <br />
+    <?php echo csrf_token_tag(); ?>
     <input type="submit" name="submit" value="Create"  />
   </form>
 
