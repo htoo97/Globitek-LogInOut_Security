@@ -58,12 +58,12 @@ The following advanced user stories are optional:
 
     * [x]  Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
 
-    * [ ]  Advanced Objective: Set/Get Signed-Encrypted Cookie
-      * [ ]  Create "public/set\_secret\_cookie.php".
-      * [ ]  Create "public/get\_secret\_cookie.php".
-      * [ ]  Encrypt and sign cookie before storing.
-      * [ ]  Verify cookie is signed correctly or show error message.
-      * [ ]  Decrypt cookie.
+    * [x]  Advanced Objective: Set/Get Signed-Encrypted Cookie
+      * [x]  Create "public/set\_secret\_cookie.php".
+      * [x]  Create "public/get\_secret\_cookie.php".
+      * [x]  Encrypt and sign cookie before storing.
+      * [x]  Verify cookie is signed correctly or show error message.
+      * [x]  Decrypt cookie.
 
 ## Video Walkthrough
 
@@ -75,7 +75,7 @@ The following advanced user stories are optional:
 
 ## Notes
 
-    Describe any challenges encountered while building the app.
+    I had to read up a lot on Codepath's security documentation to grasp the concept of CSRF tokens and their usage. The guidelines for AES-Encryption were also helpful for the Advanced Feature implementation.
 
 ## License
 
