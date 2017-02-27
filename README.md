@@ -67,15 +67,15 @@ The following advanced user stories are optional:
 
 ## Video Walkthrough
 
-    Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories:
 
-    <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-    GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-    I had to read up a lot on Codepath's security documentation to grasp the concept of CSRF tokens and their usage. The guidelines for AES-Encryption were also helpful for the Advanced Feature implementation.
+I had to read up a lot on Codepath's security documentation to grasp the concept of CSRF tokens and their usage. The guidelines for AES-Encryption were also helpful for the Advanced Feature implementation.
 
 ## License
 
