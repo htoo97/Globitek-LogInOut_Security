@@ -50,4 +50,29 @@
     return $output;
   }
 
+  function signing_checksum($string) {
+    $salt = "qi02BcXzp639";
+    return hash('sha1', $string, $salt);
+  }
+
+  function sign_string($string) {
+    return $string . '--' . signing_checksum($string);
+  }
+
+  function signed_string_is_valid($signed_string) {
+    $array = explode('--', $signed_string);
+
+    // if not 2 parts, it is malformed or not signed
+    if (count($array) != 2) { return false; }
+
+    $new_checksum = signing_checksum($array[0]);
+    return ($new_checksum === $array[1]);
+  }
+
+  function unsign_string($signed_string) {
+    $array = explode('--', $signed_string);
+
+    return $array[0];
+  }
+
 ?>
