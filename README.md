@@ -52,18 +52,18 @@ The following advanced user stories are optional:
     * [x]  The security principal not being followed: "Security through Obscurity"
     * [x]  The code has been modified to simply display "invalid username/password" rather than separately. This prevents the potential hacker from probing if the database has a particular username or if they just got the password wrong.
 
-    * [ ] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
+    * [x] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
 
     * [x]  Bonus Objective 3: CSRF tokens only valid for 10 minutes.
 
     * [x]  Bonus Objective 4: Sessions are valid only if user-agent string matches previous value.
 
     * [ ]  Advanced Objective: Set/Get Signed-Encrypted Cookie
-    * [ ]  Create "public/set\_secret\_cookie.php".
-    * [ ]  Create "public/get\_secret\_cookie.php".
-    * [ ]  Encrypt and sign cookie before storing.
-    * [ ]  Verify cookie is signed correctly or show error message.
-    * [ ]  Decrypt cookie.
+      * [ ]  Create "public/set\_secret\_cookie.php".
+      * [ ]  Create "public/get\_secret\_cookie.php".
+      * [ ]  Encrypt and sign cookie before storing.
+      * [ ]  Verify cookie is signed correctly or show error message.
+      * [ ]  Decrypt cookie.
 
 ## Video Walkthrough
 
