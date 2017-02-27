@@ -48,9 +48,9 @@ The following **required** functionality is completed:
 
 The following advanced user stories are optional:
 
-* [ ]  Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
-    * [ ]  Identify the security principal not being followed.
-    * [ ]  Write a short description of how the code could be modified to be more secure.
+* [x]  Bonus Objective 1: Identify security flaw in Objective #4 (requiring login on staff pages)
+    * [x]  The security principal not being followed: "Security through Obscurity"
+    * [x]  The code has been modified to simply display "invalid username/password" rather than separately. This prevents the potential hacker from probing if the database has a particular username or if they just got the password wrong.
 
     * [ ] Bonus Objective 2: Add CSRF protections to all forms in the staff directory
 
